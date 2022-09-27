@@ -63,7 +63,7 @@ func (h *handlerFilm) GetFilm(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	film.ThumbnailFilm = os.Getenv("PATH_FILE") + film.ThumbnailFilm
+	// film.ThumbnailFilm = os.Getenv("PATH_FILE") + film.ThumbnailFilm
 
 	w.WriteHeader(http.StatusOK)
 	response := dto.SuccessResult{Code: http.StatusOK, Data: convertResponseFilm(film)}
