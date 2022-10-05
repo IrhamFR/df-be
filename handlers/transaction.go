@@ -158,10 +158,6 @@ func (h *handlerTransaction) CreateTransaction(w http.ResponseWriter, r *http.Re
 	w.WriteHeader(http.StatusOK)
 	response := dto.SuccessResult{Code: http.StatusOK, Data: snapResp}
 	json.NewEncoder(w).Encode(response)
-
-	// w.WriteHeader(http.StatusOK)
-	// response := dto.SuccessResult{Code: http.StatusOK, Data: convertResponseTransaction(transaction)}
-	// json.NewEncoder(w).Encode(response)
 }
 
 func (h *handlerTransaction) Notification(w http.ResponseWriter, r *http.Request) {
